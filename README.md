@@ -19,7 +19,10 @@ To implement QR decomposition algorithm using the Gram-Schmidt method.
 4.	Construct the upper triangular matrix R
     ![eqn5](./ex2.jpg)
 
-
+Input: A matrix $A$ of size $m \times n$.
+Initialize: Create an empty matrix $Q$ (same size as $A$) and an empty square matrix $R$ ($n \times n$).
+Iterate: For each column $j$ from $0$ to $n-1$:Set $v$ as the $j$-th column of $A$.For each previous column $i < j$:Calculate the projection of $A[:, j]$ onto $Q[:, i]$ and store it in $R[i, j]$.Subtract this projection from $v$.Calculate the norm of the modified vector $v$ and store it in $R[j, j]$.Normalize $v$ by dividing it by its norm to get the orthonormal vector $Q[:, j]$.
+Output: Return the orthogonal matrix $Q$ and the upper triangular matrix $R$.
 
 ## Program:
 ### Gram-Schmidt Method
